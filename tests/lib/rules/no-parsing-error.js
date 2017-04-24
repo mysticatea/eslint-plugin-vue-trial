@@ -57,5 +57,20 @@ tester.run("no-parsing-error", rule, {
             code: "<template><div v-show=\"a;b;\">hello</div></template>",
             errors: ["Parsing error: Unexpected token ;."],
         },
+        {
+            filename: "test.vue",
+            code: "<template><div>{{ }}</div></template>",
+            errors: ["Parsing error: Expected an expression but got no code."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div v-show=\"\">hello</div></template>",
+            errors: ["Parsing error: Expected an expression but got no code."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div v-show=>hello</div></template>",
+            errors: ["Parsing error: Expected an expression but got no code."],
+        },
     ],
 })
