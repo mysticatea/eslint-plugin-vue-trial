@@ -13,7 +13,7 @@
     "eslint": "^3.18.0"
   },
   "dependencies": {
-    "vue-eslint-parser": "mysticatea/vue-eslint-parser#v1.1.0-1"
+    "vue-eslint-parser": "mysticatea/vue-eslint-parser#v1.1.0-2"
   },
   "devDependencies": {
     "codecov": "^2.1.0",
