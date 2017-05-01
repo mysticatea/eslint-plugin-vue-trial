@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 const RuleTester = require("eslint").RuleTester
-const rule = require("../../../lib/rules/require-one-root-element")
+const rule = require("../../../lib/rules/no-invalid-template-root")
 
 //------------------------------------------------------------------------------
 // Tests
@@ -21,7 +21,7 @@ const tester = new RuleTester({
     parserOptions: {ecmaVersion: 2015},
 })
 
-tester.run("require-one-root-element", rule, {
+tester.run("no-invalid-template-root", rule, {
     valid: [
         {
             filename: "test.vue",
@@ -38,6 +38,14 @@ tester.run("require-one-root-element", rule, {
         {
             filename: "test.vue",
             code: "<template>\n    <!-- comment -->\n    <div>abc</div>\n</template>",
+        },
+        {
+            filename: "test.vue",
+            code: "<template>\n    <!-- comment -->\n    <div v-if=\"foo\">abc</div>\n    <div v-else>abc</div>\n</template>",
+        },
+        {
+            filename: "test.vue",
+            code: "<template>\n    <!-- comment -->\n    <div v-if=\"foo\">abc</div>\n    <div v-else-if=\"bar\">abc</div>\n    <div v-else>abc</div>\n</template>",
         },
     ],
     invalid: [
@@ -70,6 +78,31 @@ tester.run("require-one-root-element", rule, {
             filename: "test.vue",
             code: "<template>aaaaaa<div></div></template>",
             errors: ["The template root requires an element rather than texts."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div v-for=\"x in list\"></div></template>",
+            errors: ["The template root disallows 'v-for' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div v-if=\"foo\"></div></template>",
+            errors: ["The template root requires the next element which has 'v-else' directives if it has 'v-if' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div v-if=\"foo\"></div><div v-else-if=\"bar\"></div></template>",
+            errors: ["The template root requires the next element which has 'v-else' directives if it has 'v-if' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><slot></slot></template>",
+            errors: ["The template root disallows '<slot>' elements."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><template></template></template>",
+            errors: ["The template root disallows '<template>' elements."],
         },
     ],
 })

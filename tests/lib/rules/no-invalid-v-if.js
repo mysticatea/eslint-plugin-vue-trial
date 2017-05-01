@@ -35,16 +35,6 @@ tester.run("no-invalid-v-if", rule, {
     invalid: [
         {
             filename: "test.vue",
-            code: "<template v-if=\"foo\"><div></div></template>",
-            errors: ["The root element can't have 'v-if' directives."],
-        },
-        {
-            filename: "test.vue",
-            code: "<template><div v-if=\"foo\"></div></template>",
-            errors: ["The root element can't have 'v-if' directives."],
-        },
-        {
-            filename: "test.vue",
             code: "<template><div><div v-if=\"foo\" v-else></div></div></template>",
             errors: ["'v-if' and 'v-else' directives can't exist on the same element. You may want 'v-else-if' directives."],
         },

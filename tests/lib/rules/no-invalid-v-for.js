@@ -60,16 +60,6 @@ tester.run("no-invalid-v-for", rule, {
     invalid: [
         {
             filename: "test.vue",
-            code: "<template v-for=\"x in list\"><div></div></template>",
-            errors: ["The root element can't have 'v-for' directives."],
-        },
-        {
-            filename: "test.vue",
-            code: "<template><div v-for=\"x in list\"></div></template>",
-            errors: ["The root element can't have 'v-for' directives."],
-        },
-        {
-            filename: "test.vue",
             code: "<template><div><div v-for:aaa=\"x in list\"></div></div></template>",
             errors: ["'v-for' directives require no argument."],
         },

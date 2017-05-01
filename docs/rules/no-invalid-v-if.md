@@ -9,7 +9,6 @@ This rule reports `v-if` directives if the following cases:
 - The directive has that argument. E.g. `<div v-if:aaa="foo"></div>`
 - The directive has that modifier. E.g. `<div v-if.bbb="foo"></div>`
 - The directive does not have that attribute value. E.g. `<div v-if></div>`
-- The directive is on the root element. E.g. `<template><div v-if="foo"></div></template>`
 - The directive is on the elements which have `v-else`/`v-else-if` directives. E.g. `<div v-else v-if="foo"></div>`
 
 This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
