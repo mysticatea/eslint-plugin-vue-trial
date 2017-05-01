@@ -12,8 +12,6 @@ This rule reports `v-else` directives if the following cases:
 - The directive is on the elements that the previous element don't have `v-if`/`v-if-else` directives. E.g. `<div v-else></div>`
 - The directive is on the elements which have `v-if`/`v-if-else` directives. E.g. `<div v-if="foo" v-else></div>`
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
-
 👎 Examples of **incorrect** code for this rule:
 
 ```html
@@ -45,9 +43,7 @@ Nothing.
 
 - [no-invalid-v-if]
 - [no-invalid-v-else]
-- [no-syntax-error]
 
 
 [no-invalid-v-if]:   no-invalid-v-if.md
 [no-invalid-v-else]: no-invalid-v-else.md
-[no-syntax-error]:   no-syntax-error.md

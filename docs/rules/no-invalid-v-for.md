@@ -14,7 +14,7 @@ This rule reports `v-for` directives if the following cases:
 
 If the element which has the directive is a reserved element, this rule does not report even if the element does not have `v-bind:key` directive because it's not faital error. [require-v-for-key] rule reports it.
 
-This rule does not check syntax errors in directives. [no-syntax-error] rule reports it.
+This rule does not check syntax errors in directives. [no-parsing-error] rule reports it.
 The following cases are syntax errors:
 
 - The directive's value is not the form `alias in expr`. E.g. `<div v-for="foo"></div>`
@@ -52,7 +52,7 @@ Nothing.
 ## 👫 Related rules
 
 - [require-v-for-key]
-- [no-syntax-error]
+- [no-parsing-error]
 
 
-[no-syntax-error]: no-syntax-error.md
+[no-parsing-error]: no-parsing-error.md

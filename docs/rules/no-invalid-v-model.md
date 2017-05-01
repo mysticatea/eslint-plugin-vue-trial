@@ -14,7 +14,7 @@ This rule reports `v-model` directives if the following cases:
 - The directive is on `<input>` elements which their types are dynamic. E.g. `<input :type="type" v-model="foo">`
 - The directive is on `<input>` elements which their types are `file`. E.g. `<input type="file" v-model="foo">`
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
+This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
 👎 Examples of **incorrect** code for this rule:
 
@@ -49,7 +49,7 @@ Nothing.
 
 ## 👫 Related rules
 
-- [no-syntax-error]
+- [no-parsing-error]
 
 
-[no-syntax-error]: no-syntax-error.md
+[no-parsing-error]: no-parsing-error.md

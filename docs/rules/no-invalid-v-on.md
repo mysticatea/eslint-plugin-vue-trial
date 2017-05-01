@@ -10,7 +10,7 @@ This rule reports `v-on` directives if the following cases:
 - The directive has invalid modifiers. E.g. `<div v-on:click.bbb="foo"></div>`
 - The directive does not have that attribute value. E.g. `<div v-on:click></div>`
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
+This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
 👎 Examples of **incorrect** code for this rule:
 
@@ -42,7 +42,7 @@ Nothing.
 
 ## 👫 Related rules
 
-- [no-syntax-error]
+- [no-parsing-error]
 
 
-[no-syntax-error]: no-syntax-error.md
+[no-parsing-error]: no-parsing-error.md

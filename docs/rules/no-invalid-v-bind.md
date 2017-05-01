@@ -11,7 +11,7 @@ This rule reports `v-bind` directives if the following cases:
 
 This rule does not report `v-bind` directives which do not have their argument (E.g. `<div v-bind="aaa"></div>`) because it's valid if the attribute value is an object.
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
+This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
 👎 Examples of **incorrect** code for this rule:
 
@@ -44,7 +44,7 @@ Nothing.
 
 ## 👫 Related rules
 
-- [no-syntax-error]
+- [no-parsing-error]
 
 
-[no-syntax-error]: no-syntax-error.md
+[no-parsing-error]: no-parsing-error.md

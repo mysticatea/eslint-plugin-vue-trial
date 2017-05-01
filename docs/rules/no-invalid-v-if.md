@@ -12,7 +12,7 @@ This rule reports `v-if` directives if the following cases:
 - The directive is on the root element. E.g. `<template><div v-if="foo"></div></template>`
 - The directive is on the elements which have `v-else`/`v-else-if` directives. E.g. `<div v-else v-if="foo"></div>`
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
+This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
 👎 Examples of **incorrect** code for this rule:
 
@@ -48,9 +48,9 @@ Nothing.
 
 - [no-invalid-v-else]
 - [no-invalid-v-else-if]
-- [no-syntax-error]
+- [no-parsing-error]
 
 
 [no-invalid-v-else]:    no-invalid-v-else.md
 [no-invalid-v-else-if]: no-invalid-v-else-if.md
-[no-syntax-error]:      no-syntax-error.md
+[no-parsing-error]:      no-parsing-error.md

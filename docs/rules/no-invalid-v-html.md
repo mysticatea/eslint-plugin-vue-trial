@@ -10,7 +10,7 @@ This rule reports `v-html` directives if the following cases:
 - The directive has that modifier. E.g. `<div v-html.bbb></div>`
 - The directive does not have that attribute value. E.g. `<div v-html></div>`
 
-This rule does not check syntax errors in directives because it's checked by [no-syntax-error] rule.
+This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
 👎 Examples of **incorrect** code for this rule:
 
@@ -40,7 +40,7 @@ Nothing.
 
 ## 👫 Related rules
 
-- [no-syntax-error]
+- [no-parsing-error]
 
 
-[no-syntax-error]: no-syntax-error.md
+[no-parsing-error]: no-parsing-error.md
