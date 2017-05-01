@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 const RuleTester = require("eslint").RuleTester
-const rule = require("../../../lib/rules/no-textarea-mustache")
+const rule = require("../../../lib/rules/no-duplicate-attributes")
 
 //------------------------------------------------------------------------------
 // Tests
@@ -21,7 +21,7 @@ const tester = new RuleTester({
     parserOptions: {ecmaVersion: 2015},
 })
 
-tester.run("no-textarea-mustache", rule, {
+tester.run("no-duplicate-attributes", rule, {
     valid: [
         {
             filename: "test.vue",
@@ -29,22 +29,28 @@ tester.run("no-textarea-mustache", rule, {
         },
         {
             filename: "test.vue",
-            code: "<template><div><textarea v-model=\"text\"></textarea></div></template>",
+            code: "<template><div><div foo :bar baz></div></div></template>",
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div @click=\"foo\" @click=\"bar\"></div></div></template>",
         },
     ],
     invalid: [
+        // {
+        //     filename: "test.vue",
+        //     code: "<template><div><div foo foo></div></div></template>",
+        //     errors: ["Duplicate attribute 'foo'."],
+        // },
         {
             filename: "test.vue",
-            code: "<template><div><textarea>{{text}}</textarea></div></template>",
-            errors: ["Unexpected mustache. Use 'v-model' instead."],
+            code: "<template><div><div foo v-bind:foo></div></div></template>",
+            errors: ["Duplicate attribute 'foo'."],
         },
         {
             filename: "test.vue",
-            code: "<template><div><textarea>{{text}} and {{text}}</textarea></div></template>",
-            errors: [
-                "Unexpected mustache. Use 'v-model' instead.",
-                "Unexpected mustache. Use 'v-model' instead.",
-            ],
+            code: "<template><div><div foo :foo></div></div></template>",
+            errors: ["Duplicate attribute 'foo'."],
         },
     ],
 })
