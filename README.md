@@ -2,15 +2,15 @@
 
 [![npm version](https://img.shields.io/npm/v/@mysticatea/eslint-plugin-vue.svg)](https://www.npmjs.com/package/@mysticatea/eslint-plugin-vue)
 [![Downloads/month](https://img.shields.io/npm/dm/@mysticatea/eslint-plugin-vue.svg)](http://www.npmtrends.com/@mysticatea/eslint-plugin-vue)
-[![Build Status](https://travis-ci.org/mysticatea/eslint-plugin-vue.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-plugin-vue)
-[![Coverage Status](https://codecov.io/gh/mysticatea/eslint-plugin-vue/branch/master/graph/badge.svg)](https://codecov.io/gh/mysticatea/eslint-plugin-vue)
-[![Dependency Status](https://david-dm.org/mysticatea/eslint-plugin-vue.svg)](https://david-dm.org/mysticatea/eslint-plugin-vue)
+[![Build Status](https://travis-ci.org/mysticatea/eslint-plugin-vue-trial.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-plugin-vue-trial)
+[![Coverage Status](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial/branch/master/graph/badge.svg)](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial)
+[![Dependency Status](https://david-dm.org/mysticatea/eslint-plugin-vue-trial.svg)](https://david-dm.org/mysticatea/eslint-plugin-vue-trial)
 
 Experimental ESLint plugin for Vue.js.
 
 ## 💿 Installation
 
-Use [npm].
+Use [npm](https://www.npmjs.com/).
 
 ```
 > npm install --save-dev eslint @mysticatea/eslint-plugin-vue
@@ -38,6 +38,9 @@ Write `.eslintrc.*` file to configure rules. See also: http://eslint.org/docs/us
 ```
 
 ## 💡 Rules
+
+- ⭐️ the mark of a recommended rule.
+- ✒️ the mark of a fixable rule.
 
 <!--RULES_TABLE_START-->
 ### Possible Errors
@@ -81,9 +84,6 @@ Write `.eslintrc.*` file to configure rules. See also: http://eslint.org/docs/us
 | ✒️ | [v-on-style](./docs/rules/v-on-style.md) | enforce v-on directive style. |
 
 <!--RULES_TABLE_END-->
-
-- ⭐️ the mark of a recommended rule.
-- ✒️ the mark of a fixable rule.
 
 ## ⚙ Configs
 
