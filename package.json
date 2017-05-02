@@ -16,6 +16,7 @@
     "vue-eslint-parser": "mysticatea/vue-eslint-parser#v1.1.0-4"
   },
   "devDependencies": {
+    "@types/node": "^4.2.6",
     "codecov": "^2.1.0",
     "eslint": "^3.18.0",
     "eslint-config-mysticatea": "^10.0.0",

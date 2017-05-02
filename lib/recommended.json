@@ -1,0 +1,33 @@
+{
+    "parser": "vue-eslint-parser",
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        "@mysticatea/vue/html-end-tags": "error",
+        "@mysticatea/vue/html-no-self-closing": "error",
+        "@mysticatea/vue/html-quotes": "off",
+        "@mysticatea/vue/no-confusing-v-for-v-if": "error",
+        "@mysticatea/vue/no-duplicate-attributes": "error",
+        "@mysticatea/vue/no-invalid-template-root": "error",
+        "@mysticatea/vue/no-invalid-v-bind": "error",
+        "@mysticatea/vue/no-invalid-v-cloak": "error",
+        "@mysticatea/vue/no-invalid-v-else-if": "error",
+        "@mysticatea/vue/no-invalid-v-else": "error",
+        "@mysticatea/vue/no-invalid-v-for": "error",
+        "@mysticatea/vue/no-invalid-v-html": "error",
+        "@mysticatea/vue/no-invalid-v-if": "error",
+        "@mysticatea/vue/no-invalid-v-model": "error",
+        "@mysticatea/vue/no-invalid-v-on": "error",
+        "@mysticatea/vue/no-invalid-v-once": "error",
+        "@mysticatea/vue/no-invalid-v-pre": "error",
+        "@mysticatea/vue/no-invalid-v-show": "error",
+        "@mysticatea/vue/no-invalid-v-text": "error",
+        "@mysticatea/vue/no-parsing-error": "error",
+        "@mysticatea/vue/no-textarea-mustache": "error",
+        "@mysticatea/vue/require-component-is": "error",
+        "@mysticatea/vue/require-v-for-key": "error",
+        "@mysticatea/vue/v-bind-style": "off",
+        "@mysticatea/vue/v-on-style": "off"
+    }
+}
