@@ -54,7 +54,14 @@ tester.run("no-invalid-v-for", rule, {
         {
             filename: "test.vue",
             code: "<template><div><your-component v-for=\"x in list\" :key=\"x.id\"></your-component></div></template>",
-            errors: ["'v-for' directives on custom elements require 'v-bind:key' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div is=\"your-component\" v-for=\"x in list\" :key=\"x.id\"></div></div></template>",
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div :is=\"your-component\" v-for=\"x in list\" :key=\"x.id\"></div></div></template>",
         },
     ],
     invalid: [
@@ -101,6 +108,21 @@ tester.run("no-invalid-v-for", rule, {
         {
             filename: "test.vue",
             code: "<template><div><your-component v-for=\"x in list\"></your-component></div></template>",
+            errors: ["'v-for' directives on custom elements require 'v-bind:key' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div is=\"your-component\" v-for=\"x in list\"></div></div></template>",
+            errors: ["'v-for' directives on custom elements require 'v-bind:key' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div :is=\"your-component\" v-for=\"x in list\"></div></div></template>",
+            errors: ["'v-for' directives on custom elements require 'v-bind:key' directives."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div v-bind:is=\"your-component\" v-for=\"x in list\"></div></div></template>",
             errors: ["'v-for' directives on custom elements require 'v-bind:key' directives."],
         },
     ],

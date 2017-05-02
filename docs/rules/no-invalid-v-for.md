@@ -19,7 +19,6 @@ The following cases are syntax errors:
 - The directive's value is not the form `alias in expr`. E.g. `<div v-for="foo"></div>`
 - The alias is not LHS. E.g. `<div v-for="foo() in list"></div>`
 
-
 👎 Examples of **incorrect** code for this rule:
 
 ```html
@@ -29,6 +28,7 @@ The following cases are syntax errors:
         <div v-for:aaa="x in list"></div>
         <div v-for.bbb="x in list"></div>
         <your-component v-for="x in list"></your-component>
+        <div is="your-component" v-for="x in list"></div>
     </div>
 </template>
 ```
@@ -40,6 +40,7 @@ The following cases are syntax errors:
     <div>
         <div v-for="x in list"></div>
         <your-component v-for="x in list" :key="x.id"></your-component>
+        <div is="your-component" v-for="x in list" :key="x.id"></div>
     </div>
 </template>
 ```
