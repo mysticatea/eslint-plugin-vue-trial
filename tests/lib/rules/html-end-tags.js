@@ -67,11 +67,13 @@ tester.run("html-end-tags", rule, {
         {
             filename: "test.vue",
             code: "<template><div><div></div></template>",
+            output: "<template><div><div></div></div></template>",
             errors: ["'<div>' should have end tag."],
         },
         {
             filename: "test.vue",
             code: "<template><div><p></div></template>",
+            output: "<template><div><p></p></div></template>",
             errors: ["'<p>' should have end tag."],
         },
     ],
