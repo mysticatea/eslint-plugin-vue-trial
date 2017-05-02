@@ -63,6 +63,10 @@ tester.run("no-invalid-v-model", rule, {
             filename: "test.vue",
             code: "<template><your-component v-model=\"foo\"></your-component></template>",
         },
+        {
+            filename: "test.vue",
+            code: "<template><div><div v-for=\"x in list\"><input v-model=\"x.foo\"></div></div></template>",
+        },
     ],
     invalid: [
         {
@@ -104,6 +108,11 @@ tester.run("no-invalid-v-model", rule, {
             filename: "test.vue",
             code: "<template><input type=\"file\" v-model=\"b\"></template>",
             errors: ["'v-model' directives don't support 'file' input type."],
+        },
+        {
+            filename: "test.vue",
+            code: "<template><div><div v-for=\"x in list\"><input v-model=\"x\"></div></div></template>",
+            errors: ["'v-model' directives cannot update the iteration variable 'x' itself."],
         },
     ],
 })

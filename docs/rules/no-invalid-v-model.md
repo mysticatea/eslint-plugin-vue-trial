@@ -13,6 +13,7 @@ This rule reports `v-model` directives if the following cases:
 - The directive is on unsupported elements. E.g. `<div v-model="foo"></div>`
 - The directive is on `<input>` elements which their types are dynamic. E.g. `<input :type="type" v-model="foo">`
 - The directive is on `<input>` elements which their types are `file`. E.g. `<input type="file" v-model="foo">`
+- The directive's reference is iteration variables. E.g. `<div v-for="x in list"><input type="file" v-model="x"></div>`
 
 This rule does not check syntax errors in directives because it's checked by [no-parsing-error] rule.
 
@@ -26,6 +27,9 @@ This rule does not check syntax errors in directives because it's checked by [no
         <input v-model.bbb="foo">
         <input v-model="foo + bar">
         <div v-model="foo"></div>
+        <div v-for="x in list">
+            <input v-model="x">
+        </div>
     </div>
 </template>
 ```
@@ -39,6 +43,9 @@ This rule does not check syntax errors in directives because it's checked by [no
         <input v-model.lazy="foo">
         <textarea v-model="foo"></textarea>
         <your-component v-model="foo"></your-component>
+        <div v-for="x in list">
+            <input v-model="x.name">
+        </div>
     </div>
 </template>
 ```
