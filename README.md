@@ -1,7 +1,7 @@
 # @mysticatea/eslint-plugin-vue
 
-[![npm version](https://img.shields.io/npm/v/@mysticatea/eslint-plugin-vue.svg)](https://www.npmjs.com/package/@mysticatea/eslint-plugin-vue)
-[![Downloads/month](https://img.shields.io/npm/dm/@mysticatea/eslint-plugin-vue.svg)](http://www.npmtrends.com/@mysticatea/eslint-plugin-vue)
+[![npm version](https://img.shields.io/npm/v/%40mysticatea%2Feslint-plugin-vue.svg)](https://www.npmjs.com/package/@mysticatea/eslint-plugin-vue)
+[![Downloads/month](https://img.shields.io/npm/dm/%40mysticatea%2Feslint-plugin-vue.svg)](http://www.npmtrends.com/%40mysticatea%2Feslint-plugin-vue)
 [![Build Status](https://travis-ci.org/mysticatea/eslint-plugin-vue-trial.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-plugin-vue-trial)
 [![Coverage Status](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial/branch/master/graph/badge.svg)](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial)
 [![Dependency Status](https://david-dm.org/mysticatea/eslint-plugin-vue-trial.svg)](https://david-dm.org/mysticatea/eslint-plugin-vue-trial)
