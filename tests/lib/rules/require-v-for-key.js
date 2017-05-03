@@ -51,15 +51,5 @@ tester.run("require-v-for-key", rule, {
             code: "<template><div><div v-for=\"x in list\" key=\"100\"></div></div></template>",
             errors: ["'v-for' directives require 'v-bind:key' directives."],
         },
-        {
-            filename: "test.vue",
-            code: "<template><div><div v-for=\"x in list\" :key=\"100\"></div></div></template>",
-            errors: ["Expected 'v-bind:key' directive to use the variables which are defined by the 'v-for' directive."],
-        },
-        {
-            filename: "test.vue",
-            code: "<template><div><custom-component v-for=\"x in list\" :key=\"100\"></custom-component></div></template>",
-            errors: ["Expected 'v-bind:key' directive to use the variables which are defined by the 'v-for' directive."],
-        },
     ],
 })
