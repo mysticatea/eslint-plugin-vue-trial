@@ -1,6 +1,6 @@
 {
   "name": "@mysticatea/eslint-plugin-vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Experimental ESLint plugin for Vue.js.",
   "engines": {
     "node": ">=4"
