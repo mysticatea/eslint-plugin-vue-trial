@@ -117,7 +117,7 @@ This preset config:
 
 ## 📰 Changelog
 
-- [GitHub Releases](https://github.com/mysticatea/eslint-plugin-vue/releases)
+- [GitHub Releases](https://github.com/mysticatea/eslint-plugin-vue-trial/releases)
 
 ## 💎 Contributing
 
