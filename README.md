@@ -6,6 +6,8 @@
 [![Coverage Status](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial/branch/master/graph/badge.svg)](https://codecov.io/gh/mysticatea/eslint-plugin-vue-trial)
 [![Dependency Status](https://david-dm.org/mysticatea/eslint-plugin-vue-trial.svg)](https://david-dm.org/mysticatea/eslint-plugin-vue-trial)
 
+❗️ This plugin has been merged to the official [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) as 3.0.0. Please use that. ❗️
+
 Experimental ESLint plugin for Vue.js.
 
 ## 💿 Installation
